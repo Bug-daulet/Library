@@ -44,6 +44,16 @@
 
 
 <div class="container">
+    <%  String result = (String) request.getAttribute("result");
+        if (result != null) { %>
+            <div id="displayResult" class="alert alert-primary m-2" role="alert">
+                <h3><%=result%></h3>
+            </div>
+            <script type="text/javascript">
+                $("#displayResult").show().delay(5000).fadeOut();
+            </script>
+    <%  } %>
+
     <%
         for (Book book : bookList) { %>
     <form id="book-<%=book.getIsbn()%>" action="borrow" method="post">

@@ -21,8 +21,8 @@ public class Login extends HttpServlet {
                 request.getSession().setAttribute("user", user);
                 request.getRequestDispatcher("index.jsp").forward(request, response);
             } else {
-                PrintWriter printWriter = response.getWriter();
-                printWriter.println("Incorrect username or password!");
+                request.setAttribute("result", "Incorrect username or password!");
+                request.getRequestDispatcher("login.jsp").forward(request, response);
             }
         } catch (Exception e) {
             e.printStackTrace();

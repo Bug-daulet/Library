@@ -19,7 +19,9 @@ public class Borrow extends HttpServlet {
         } else {
             try {
                 User user = (User) request.getSession().getAttribute("user");
-                DBQueries.borrowBook(isbn, user.getId());
+                String result = DBQueries.borrowBook(isbn, user.getId());
+                request.setAttribute("result", result);
+                request.getRequestDispatcher("index.jsp").forward(request, response);
             } catch (SQLException throwable) {
                 throwable.printStackTrace();
             }

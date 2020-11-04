@@ -1,4 +1,6 @@
 #navbar ul {
+    position: absolute;
+    top: 0;
     margin: 0;
     padding: 5px;
     list-style-type: none;

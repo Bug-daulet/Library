@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/">
+    <Resource name="jdbc/myOracle" auth="Container"
+              type="javax.sql.DataSource" driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/library?serverTimezone=UTC"
+              username="admin" password="YJI7gdJI9iaS01kh" maxActive="100" maxIdle="20"
+              maxWait="10000"/>
+    <!--
+        driverClassName   oracle.jdbc.driver.OracleDriver
+        url               jdbc:oracle:thin:@localhost:1521:orcl
+        username          sys as sysdba
+        password          Oracle2020
+    -->
+
+</Context>
